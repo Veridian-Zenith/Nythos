@@ -3,7 +3,7 @@
 # 🧠 Nythos Project
 
 **Nythos** is an adaptive, privacy-focused AI system designed to operate within the framework of **EU regulations**.
-Built using the **Zig** programming language and entirely free and open-source tools, Nythos prioritizes **user control**, **transparency**, and **data privacy**.
+Built using the **Rust** programming language and entirely free and open-source tools, Nythos prioritizes **user control**, **transparency**, and **data privacy**.
 
 ---
 
@@ -22,26 +22,23 @@ The project is structured as follows:
 ```
 /src
 ├── engine/
-│   ├── core.zig         # Core reasoning & task execution
-│   ├── inference.zig    # Query inference logic
-│   └── privacy.zig      # Data protection and encryption
+│   ├── core.rs          # Core reasoning & task execution
+│   ├── fact_checker.rs  # Fact-checking logic
+│   ├── inference.rs     # Query inference logic
+│   ├── monetization.rs  # Monetization logic
+│   ├── optimization.rs  # Optimization logic
+│   ├── privacy.rs       # Data protection and encryption
+│   ├── user_experience.rs # User experience enhancements
+│   └── web_query.rs     # Web querying and search
 │
-├── models/
-│   └── base.zig         # Knowledge structure and model definitions
-│
-├── utils/
-│   ├── compliance.zig   # EU legal compliance enforcement
-│   └── validation.zig   # Input validation and data checks
-│
-└── main.zig             # Application entry point
+└── main.rs              # Application entry point
 ```
 
 ```
 /tests
-├── core_test.zig        # Unit tests for core logic
-└── privacy_test.zig     # Tests focused on privacy modules
+# (Tests will be added here later)
 
-build.zig                # Build configuration
+Cargo.toml               # Rust package configuration
 LICENSE                  # License and legal info
 ```
 
@@ -52,10 +49,10 @@ LICENSE                  # License and legal info
 To build and run Nythos:
 
 ```sh
-zig build run
+cargo run
 ```
 
-> ✅ Ensure **Zig** is installed on your system.
+> ✅ Ensure **Rust** and **Cargo** are installed on your system.
 > Check individual source files for additional setup details and usage instructions.
 
 ---
